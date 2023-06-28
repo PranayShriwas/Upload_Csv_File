@@ -3,6 +3,6 @@ from .import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('admin_all/', views.admin, name='admin_page'),
-    path('downloafde/<int:file_id>/', views.download_file, name='download_file'),
+    path('downloafde/<int:file_id>/', views.download_file, name='downloade_file'),
     path('view/<int:file_id>/', views.view_file, name='view_file'),
 ]
