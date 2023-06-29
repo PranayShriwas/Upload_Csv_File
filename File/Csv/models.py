@@ -4,7 +4,7 @@ from django.db import models
 
 
 class UploaderFile(models.Model):
-    file = models.FileField(upload_to='upload_file/')
+    file = models.FileField(upload_to='uploade_file/')
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:

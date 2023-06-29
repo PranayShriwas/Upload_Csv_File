@@ -1,22 +1,23 @@
 {% extends 'base.html' %}
+
 {% block content %}
+
 <h1>Uploaded Files</h1>
 
 <table>
     <thead>
-        
         <tr>
             <th>S.No</th>
             <th>File</th>
             <th>Action</th>
         </tr>
-        
     </thead>
     <tbody>
-        {% for i  in uploaded_file %}
+        {% for file in uploaded_file %}
+
         <tr>
             <td>{{forloop.counter}}</td>
-            <td>{{i.file.name}}</td>
+            <td>{{file.file.name}}</td>
             <td>
                 <a href="{% url 'downloade_file' file.id %}">Download</a>
                 <a href="{% url 'view_file' file.id %}">View</a>
@@ -25,4 +26,4 @@
         {% endfor %}
     </tbody>
 </table>
-{% endblock  %}
+{% endblock %}
